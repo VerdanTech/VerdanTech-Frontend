@@ -1,7 +1,7 @@
 import { defineConfig } from 'orval';
 
 export default defineConfig({
-	verdantech_client: {
+	vdt_frontend: {
 		input: {
 			target: './schema.yml'
 			//validation: true
@@ -9,18 +9,17 @@ export default defineConfig({
 		output: {
 			mode: 'tags-split',
 			client: 'svelte-query',
-			target: 'src/lib/api/codegen/',
+			target: 'src/lib/clientgen/',
 			//useDates: true,
 			mock: true,
-			override: {
-				mutator: {
-					path: './src/lib/api/customAxios.ts',
-					name: 'customInstance'
-				}
+			//override: {
+				//mutator: {
+					//path: './src/lib/api/customAxios.ts',
+					//name: 'customInstance'
+				//}
 			}
-		},
-		hooks: {
-			afterAllFilesWrite: 'npm run format'
 		}
-	}
+		//hooks: {
+			//afterAllFilesWrite: 'npm run format'
+		//}
 });
