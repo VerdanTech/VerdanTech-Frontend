@@ -11,17 +11,15 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
 
-		// Configure tool-specific properties.
-		"customizations": {
-			"vscode": {
-				"settings": {
-				},
-				"extensions": [	
-					"ms-vscode.vscode-typescript-next",
-					"svelte.svelte-vscode"
-				]
-			}
-		
-		},
-
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-vscode.vscode-typescript-next",
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss"
+			]
+		}
+	}
 }
