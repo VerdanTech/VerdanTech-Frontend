@@ -1,20 +1,31 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-	content: ['./src/**/*.{html,svelte,js,ts}'],
-	theme: {
-		extend: {}
-	},
-	plugins: [require('daisyui')],
+const { createPlugin } = require('windy-radix-palette');
 
-	// daisyUI config
-	daisyui: {
-		themes: ['emerald'], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-		darkTheme: 'forest', // name of one of the included themes for dark mode
-		base: true, // applies background color and foreground color for root element by default
-		styled: true, // include daisyUI colors and design decisions for all components
-		utils: true, // adds responsive and modifier utility classes
-		prefix: '', // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-		logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-		themeRoot: ':root' // The element that receives theme color CSS variables
+const colors = createPlugin();
+
+/** @type {import('tailwindcss').Config} */
+const config = {
+	darkMode: ['class'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
+	plugins: [colors.plugin, require('@tailwindcss/container-queries')],
+	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px'
+			}
+		},
+		extend: {
+			colors: {
+				neutral: colors.alias('olive'),
+				primary: colors.alias('grass'),
+				accent: colors.alias('amber'),
+				descructive: colors.alias('tomato'),
+				warning: colors.alias('yellow'),
+				success: colors.alias('teal')
+			}
+		}
 	}
 };
+
+export default config;

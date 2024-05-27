@@ -27,11 +27,7 @@ export const gardenAttributesSet = <TData = AxiosResponse<GardenFullSchema>>(
 	environmentAttributeClusterInput: EnvironmentAttributeClusterInput,
 	options?: AxiosRequestConfig
 ): Promise<TData> => {
-	return axios.post(
-		`/vdtapi/gardens/attributes/set`,
-		environmentAttributeClusterInput,
-		options
-	);
+	return axios.post(`/vdtapi/gardens/attributes/set`, environmentAttributeClusterInput, options);
 };
 /**
  * Accepts a Garden Membership.
@@ -54,11 +50,7 @@ export const gardenChange = <TData = AxiosResponse<GardenMembershipFullSchema>>(
 	gardenRoleChangeInput: GardenRoleChangeInput,
 	options?: AxiosRequestConfig
 ): Promise<TData> => {
-	return axios.post(
-		`/vdtapi/gardens/membership/change`,
-		gardenRoleChangeInput,
-		options
-	);
+	return axios.post(`/vdtapi/gardens/membership/change`, gardenRoleChangeInput, options);
 };
 /**
  * Creates a new Garden Membership and sends an email confirmation email.
@@ -68,11 +60,7 @@ export const gardenInvite = <TData = AxiosResponse<GardenMembershipFullSchema>>(
 	gardenInviteCreateInput: GardenInviteCreateInput,
 	options?: AxiosRequestConfig
 ): Promise<TData> => {
-	return axios.post(
-		`/vdtapi/gardens/membership/invite`,
-		gardenInviteCreateInput,
-		options
-	);
+	return axios.post(`/vdtapi/gardens/membership/invite`, gardenInviteCreateInput, options);
 };
 /**
  * Removes own Garden Membership from a garden.
@@ -95,11 +83,7 @@ export const gardenRevoke = <TData = AxiosResponse<string>>(
 	gardenRevokeMembershipInput: GardenRevokeMembershipInput,
 	options?: AxiosRequestConfig
 ): Promise<TData> => {
-	return axios.post(
-		`/vdtapi/gardens/membership/revoke`,
-		gardenRevokeMembershipInput,
-		options
-	);
+	return axios.post(`/vdtapi/gardens/membership/revoke`, gardenRevokeMembershipInput, options);
 };
 /**
  * Creates a new Garden and invites requested users.

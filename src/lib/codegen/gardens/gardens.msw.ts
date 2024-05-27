@@ -32,30 +32,23 @@ export const getGardenAttributesSetMock = () => ({
 		])
 	},
 	creator: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), username: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), username: faker.word.sample() }]),
 		undefined
 	]),
 	description: faker.word.sample(),
 	id: faker.string.uuid(),
 	key: faker.word.sample(),
-	memberships: Array.from(
-		{ length: faker.number.int({ min: 1, max: 10 }) },
-		(_, i) => i + 1
-	).map(() => ({
-		created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
-		garden_ref: faker.helpers.arrayElement([
-			faker.helpers.arrayElement([
-				{},
-				{ id: faker.string.uuid(), key: faker.word.sample() }
+	memberships: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(
+		() => ({
+			created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
+			garden_ref: faker.helpers.arrayElement([
+				faker.helpers.arrayElement([{}, { id: faker.string.uuid(), key: faker.word.sample() }]),
+				undefined
 			]),
-			undefined
-		]),
-		role: faker.helpers.arrayElement(['admin', 'editor', 'viewer'] as const),
-		user: { id: faker.string.uuid(), username: faker.word.sample() }
-	})),
+			role: faker.helpers.arrayElement(['admin', 'editor', 'viewer'] as const),
+			user: { id: faker.string.uuid(), username: faker.word.sample() }
+		})
+	),
 	name: faker.word.sample(),
 	num_memberships: faker.number.int({ min: undefined, max: undefined }),
 	visibility: faker.helpers.arrayElement(['private', 'unlisted', 'public'] as const)
@@ -65,17 +58,11 @@ export const getGardenAcceptInviteMock = () => ({
 	created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
 	favorite: faker.datatype.boolean(),
 	garden_ref: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), key: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), key: faker.word.sample() }]),
 		undefined
 	]),
 	inviter: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), username: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), username: faker.word.sample() }]),
 		undefined
 	]),
 	open_invite: faker.datatype.boolean(),
@@ -87,17 +74,11 @@ export const getGardenChangeMock = () => ({
 	created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
 	favorite: faker.datatype.boolean(),
 	garden_ref: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), key: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), key: faker.word.sample() }]),
 		undefined
 	]),
 	inviter: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), username: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), username: faker.word.sample() }]),
 		undefined
 	]),
 	open_invite: faker.datatype.boolean(),
@@ -109,17 +90,11 @@ export const getGardenInviteMock = () => ({
 	created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
 	favorite: faker.datatype.boolean(),
 	garden_ref: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), key: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), key: faker.word.sample() }]),
 		undefined
 	]),
 	inviter: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), username: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), username: faker.word.sample() }]),
 		undefined
 	]),
 	open_invite: faker.datatype.boolean(),
@@ -155,30 +130,23 @@ export const getGardenCreateMock = () => ({
 		])
 	},
 	creator: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			{ id: faker.string.uuid(), username: faker.word.sample() }
-		]),
+		faker.helpers.arrayElement([{}, { id: faker.string.uuid(), username: faker.word.sample() }]),
 		undefined
 	]),
 	description: faker.word.sample(),
 	id: faker.string.uuid(),
 	key: faker.word.sample(),
-	memberships: Array.from(
-		{ length: faker.number.int({ min: 1, max: 10 }) },
-		(_, i) => i + 1
-	).map(() => ({
-		created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
-		garden_ref: faker.helpers.arrayElement([
-			faker.helpers.arrayElement([
-				{},
-				{ id: faker.string.uuid(), key: faker.word.sample() }
+	memberships: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(
+		() => ({
+			created_at: `${faker.date.past().toISOString().split('.')[0]}Z`,
+			garden_ref: faker.helpers.arrayElement([
+				faker.helpers.arrayElement([{}, { id: faker.string.uuid(), key: faker.word.sample() }]),
+				undefined
 			]),
-			undefined
-		]),
-		role: faker.helpers.arrayElement(['admin', 'editor', 'viewer'] as const),
-		user: { id: faker.string.uuid(), username: faker.word.sample() }
-	})),
+			role: faker.helpers.arrayElement(['admin', 'editor', 'viewer'] as const),
+			user: { id: faker.string.uuid(), username: faker.word.sample() }
+		})
+	),
 	name: faker.word.sample(),
 	num_memberships: faker.number.int({ min: undefined, max: undefined }),
 	visibility: faker.helpers.arrayElement(['private', 'unlisted', 'public'] as const)

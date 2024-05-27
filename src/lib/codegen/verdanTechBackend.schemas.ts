@@ -213,10 +213,7 @@ export type GardenChange400ExtraAnyOf = { [key: string]: any };
 
 export type GardenAcceptInvite400ExtraAnyOf = { [key: string]: any };
 
-export type GardenAcceptInvite400Extra =
-	| null
-	| GardenAcceptInvite400ExtraAnyOf
-	| unknown[];
+export type GardenAcceptInvite400Extra = null | GardenAcceptInvite400ExtraAnyOf | unknown[];
 
 /**
  * Validation Exception
@@ -233,10 +230,7 @@ export type GardenAcceptInviteParams = {
 
 export type GardenAttributesSet400ExtraAnyOf = { [key: string]: any };
 
-export type GardenAttributesSet400Extra =
-	| null
-	| GardenAttributesSet400ExtraAnyOf
-	| unknown[];
+export type GardenAttributesSet400Extra = null | GardenAttributesSet400ExtraAnyOf | unknown[];
 
 /**
  * Validation Exception
@@ -435,16 +429,13 @@ export interface FrostDateProfile {
 	last_frost_date: string;
 }
 
-export type EnvironmentAttributeClusterInputProfilesItem =
-	| FrostDateProfile
-	| GeoCoordinateProfile;
+export type EnvironmentAttributeClusterInputProfilesItem = FrostDateProfile | GeoCoordinateProfile;
 
 export interface EnvironmentAttributeClusterInput {
 	profiles: EnvironmentAttributeClusterInputProfilesItem[];
 }
 
-export type EnvironmentAttributeClusterGeoCoordinateProfile =
-	null | GeoCoordinateProfile;
+export type EnvironmentAttributeClusterGeoCoordinateProfile = null | GeoCoordinateProfile;
 
 export type EnvironmentAttributeClusterFrostDateProfile = null | FrostDateProfile;
 

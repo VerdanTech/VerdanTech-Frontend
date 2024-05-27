@@ -10,20 +10,16 @@ import { HttpResponse, delay, http } from 'msw';
 
 export const getUserLoginMock = () => ({
 	created_at: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			`${faker.date.past().toISOString().split('.')[0]}Z`
-		]),
+		faker.helpers.arrayElement([{}, `${faker.date.past().toISOString().split('.')[0]}Z`]),
 		undefined
 	]),
-	emails: Array.from(
-		{ length: faker.number.int({ min: 1, max: 10 }) },
-		(_, i) => i + 1
-	).map(() => ({
-		address: faker.word.sample(),
-		primary: faker.datatype.boolean(),
-		verified: faker.datatype.boolean()
-	})),
+	emails: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(
+		() => ({
+			address: faker.word.sample(),
+			primary: faker.datatype.boolean(),
+			verified: faker.datatype.boolean()
+		})
+	),
 	id: faker.string.uuid(),
 	is_superuser: faker.datatype.boolean(),
 	username: faker.word.sample()
@@ -31,25 +27,22 @@ export const getUserLoginMock = () => ({
 
 export const getUserProfilesMock = () =>
 	faker.helpers.arrayElement([
-		Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(
-			() => ({ id: faker.string.uuid(), username: faker.word.sample() })
-		),
+		Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(() => ({
+			id: faker.string.uuid(),
+			username: faker.word.sample()
+		})),
 		{
 			created_at: faker.helpers.arrayElement([
-				faker.helpers.arrayElement([
-					{},
-					`${faker.date.past().toISOString().split('.')[0]}Z`
-				]),
+				faker.helpers.arrayElement([{}, `${faker.date.past().toISOString().split('.')[0]}Z`]),
 				undefined
 			]),
-			emails: Array.from(
-				{ length: faker.number.int({ min: 1, max: 10 }) },
-				(_, i) => i + 1
-			).map(() => ({
-				address: faker.word.sample(),
-				primary: faker.datatype.boolean(),
-				verified: faker.datatype.boolean()
-			})),
+			emails: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(
+				() => ({
+					address: faker.word.sample(),
+					primary: faker.datatype.boolean(),
+					verified: faker.datatype.boolean()
+				})
+			),
 			id: faker.string.uuid(),
 			is_superuser: faker.datatype.boolean(),
 			username: faker.word.sample()
@@ -66,20 +59,16 @@ export const getUserPasswordResetRequestMock = () => faker.word.sample();
 
 export const getUserCreateMock = () => ({
 	created_at: faker.helpers.arrayElement([
-		faker.helpers.arrayElement([
-			{},
-			`${faker.date.past().toISOString().split('.')[0]}Z`
-		]),
+		faker.helpers.arrayElement([{}, `${faker.date.past().toISOString().split('.')[0]}Z`]),
 		undefined
 	]),
-	emails: Array.from(
-		{ length: faker.number.int({ min: 1, max: 10 }) },
-		(_, i) => i + 1
-	).map(() => ({
-		address: faker.word.sample(),
-		primary: faker.datatype.boolean(),
-		verified: faker.datatype.boolean()
-	})),
+	emails: Array.from({ length: faker.number.int({ min: 1, max: 10 }) }, (_, i) => i + 1).map(
+		() => ({
+			address: faker.word.sample(),
+			primary: faker.datatype.boolean(),
+			verified: faker.datatype.boolean()
+		})
+	),
 	id: faker.string.uuid(),
 	is_superuser: faker.datatype.boolean(),
 	username: faker.word.sample()
