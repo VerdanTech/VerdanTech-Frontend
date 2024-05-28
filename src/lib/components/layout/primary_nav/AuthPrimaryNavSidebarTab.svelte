@@ -47,7 +47,7 @@ Single tab for navigating between feature domains on the main sidebar.
 		<li class="w-full">
 			<Button
 				href={spec.url}
-				class="w-full rounded-none text-lg font-bold text-neutral-12 opacity-90 hover:bg-primary-5 hover:text-primary-12 {flipped
+				class="w-full rounded-none bg-neutral-3 text-lg font-bold text-neutral-12 opacity-90 hover:bg-primary-5 hover:text-primary-12 {flipped
 					? 'rounded-br-lg'
 					: 'rounded-tr-lg'}">{spec.label}</Button
 			>
@@ -61,7 +61,7 @@ Single tab for navigating between feature domains on the main sidebar.
 			<li class="w-full">
 				<Button
 					href={item.url}
-					class="w-full justify-start rounded-none text-lg text-neutral-12 opacity-80 hover:bg-primary-4 hover:text-primary-12 {index ===
+					class="w-full justify-start bg-neutral-3 rounded-none text-lg text-neutral-12 opacity-80 hover:bg-primary-4 hover:text-primary-12 {index ===
 						spec.submenu_items.length - 1 && !flipped
 						? 'rounded-br-lg'
 						: ''} {index === spec.submenu_items.length - 1 && flipped ? 'rounded-tr-lg' : ''}"

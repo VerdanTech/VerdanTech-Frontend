@@ -17,7 +17,7 @@
 	{date}
 	{month}
 	class={cn(
-		buttonVariants({ variant: 'ghost' }),
+		buttonVariants({ variant: 'outline' }),
 		'h-9 w-9 p-0 font-normal ',
 		'[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
 		// Selected
