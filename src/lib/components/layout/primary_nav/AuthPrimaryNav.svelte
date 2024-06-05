@@ -50,7 +50,7 @@ Shown to authenticated users everywhere in the app.
 
 <!-- Small screens bottom bar. -->
 <nav
-	class="fixed bottom-0 flex h-16 w-full flex-row items-center justify-around bg-neutral-2 lg:h-0 first:lg:hidden"
+	class="fixed bottom-0 flex h-16 w-full flex-row items-center justify-around border border-neutral-6 bg-neutral-3 lg:h-0 first:lg:hidden"
 >
 	{#each mobile_tabs ?? [] as tab}
 		{#if tab !== undefined}
@@ -62,7 +62,7 @@ Shown to authenticated users everywhere in the app.
 
 <!-- Large screens sidebar. -->
 <nav
-	class="text-foreground fixed top-0 z-10 hidden h-full w-0 flex-col items-center justify-between border-r-0 bg-neutral-2 lg:flex lg:w-16"
+	class="text-foreground fixed top-0 z-10 hidden h-full w-0 flex-col items-center justify-between border border-neutral-6 bg-neutral-3 lg:flex lg:w-16"
 >
 	<!-- Links displayed at the top. -->
 	<ul class="flex w-full flex-col">

@@ -46,7 +46,7 @@ Single tab for navigating between feature domains on the main bottom bar.
 		</i>
 	</Popover.Trigger>
 	<Popover.Content
-		class="w-auto -translate-y-2 justify-evenly rounded-lg bg-neutral-3"
+		class="w-auto -translate-y-2 justify-evenly rounded-lg border border-neutral-6 bg-neutral-3 shadow-sm"
 		transition={flyAndScale}
 		transitionConfig={{ duration: 150, y: 10, start: 1 }}
 	>

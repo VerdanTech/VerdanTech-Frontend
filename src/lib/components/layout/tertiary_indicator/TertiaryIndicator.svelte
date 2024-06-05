@@ -10,7 +10,7 @@ Secondary navigation between different sections of a single
 feature domain.
 -->
 
-<div class="h-8 w-full bg-neutral-3 text-neutral-11">
+<div class="h-8 w-full bg-neutral-2 text-neutral-11 border-t border-neutral-6">
 	<ul class="flex h-full items-center justify-between">
 		<!-- Left -->
 		<li class="ml-4">

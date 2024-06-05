@@ -16,6 +16,8 @@
 	},
 	"devDependencies": {
 		"@iconify/json": "^2.2.196",
+		"@melt-ui/pp": "^0.3.2",
+		"@melt-ui/svelte": "^0.80.0",
 		"@playwright/test": "^1.28.1",
 		"@radix-ui/colors": "^3.0.0",
 		"@sveltejs/adapter-auto": "^3.0.0",

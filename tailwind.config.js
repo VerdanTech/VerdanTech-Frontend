@@ -21,8 +21,8 @@ const config = {
 				primary: colors.alias('grass'),
 				accent: colors.alias('amber'),
 				descructive: colors.alias('tomato'),
-				warning: colors.alias('yellow'),
-				success: colors.alias('teal')
+				warning: colors.alias('cyan'),
+				success: colors.alias('mint')
 			}
 		}
 	}

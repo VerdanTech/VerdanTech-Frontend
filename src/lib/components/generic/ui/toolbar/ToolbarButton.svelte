@@ -13,7 +13,7 @@
 <TooltipWrapper {spec}>
 	<Toolbar.Button
 		on:click={spec.on_click}
-		class="flex items-center bg-neutral-3 {padding} text-neutral-12 transition-all hover:bg-neutral-4 active:bg-neutral-5"
+		class="flex h-full items-center bg-neutral-2 {padding} text-neutral-12 transition-all hover:bg-neutral-3 active:bg-neutral-4"
 	>
 		<i class="h-full">
 			<svelte:component this={spec.icon} class={size} />

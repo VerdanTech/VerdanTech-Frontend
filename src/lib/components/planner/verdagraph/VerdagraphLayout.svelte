@@ -23,7 +23,7 @@
 						y: 0,
 						width: stage_width,
 						height: stage_height,
-						fill: colors.primary['grass2']
+						fill: colors.neutral['olive1']
 					}}
 				/>
 			</Layer>

@@ -9,7 +9,7 @@
 </script>
 
 <CalendarPrimitive.HeadCell
-	class={cn('text-neutral-12 w-9 rounded-md text-[0.8rem] font-normal', className)}
+	class={cn('w-9 rounded-md text-[0.8rem] font-normal text-neutral-12', className)}
 	{...$$restProps}
 >
 	<slot />

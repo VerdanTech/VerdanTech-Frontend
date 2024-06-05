@@ -31,7 +31,7 @@
 Single tab for navigating between feature domains on the main sidebar.
 -->
 
-<div class="group relative flex justify-evenly bg-neutral-2 py-1 hover:bg-neutral-3">
+<div class="group relative flex justify-evenly bg-neutral-3 py-1 transition-all hover:bg-primary-5">
 	<a href={spec.url}>
 		<i>
 			<svelte:component this={spec.icon} class="my-2 text-4xl text-neutral-12" />
@@ -40,34 +40,37 @@ Single tab for navigating between feature domains on the main sidebar.
 
 	<!-- Submenu. -->
 	<ul
-		class="invisible absolute left-full flex w-auto -translate-y-1 flex-col rounded-r-lg bg-neutral-3 {flipped
+		class="invisible absolute left-full flex w-auto -translate-y-1 flex-col rounded-r-lg border border-neutral-6 bg-neutral-2 shadow-sm {flipped
 			? 'bottom-0 flex-col-reverse'
 			: 'top-0 flex-col'} text-sm opacity-0 transition duration-300 ease-in-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
 	>
 		<li class="w-full">
 			<Button
 				href={spec.url}
-				class="w-full rounded-none bg-neutral-3 text-lg font-bold text-neutral-12 opacity-90 hover:bg-primary-5 hover:text-primary-12 {flipped
+				class="w-full rounded-none bg-neutral-2 text-lg font-bold text-neutral-12 hover:bg-primary-5 hover:text-primary-12 {flipped
 					? 'rounded-br-lg'
 					: 'rounded-tr-lg'}">{spec.label}</Button
 			>
 		</li>
 		{#if spec.submenu_items.length > 0}
 			<li class="w-full">
-				<Separator class="bg-neutral-6 opacity-50" />
+				<Separator class="bg-neutral-8 opacity-75" />
 			</li>
 		{/if}
 		{#each spec.submenu_items ?? [] as item, index}
 			<li class="w-full">
 				<Button
 					href={item.url}
-					class="w-full justify-start bg-neutral-3 rounded-none text-lg text-neutral-12 opacity-80 hover:bg-primary-4 hover:text-primary-12 {index ===
+					class="w-full justify-start rounded-none bg-neutral-2 text-lg text-neutral-12 hover:bg-primary-4 hover:text-primary-12 {index ===
 						spec.submenu_items.length - 1 && !flipped
 						? 'rounded-br-lg'
 						: ''} {index === spec.submenu_items.length - 1 && flipped ? 'rounded-tr-lg' : ''}"
 				>
 					<i>
-						<svelte:component this={item.icon} class="text-foreground my-2 mr-2 text-xl" />
+						<svelte:component
+							this={item.icon}
+							class="text-foreground mr-2 text-xl hover:text-primary-12"
+						/>
 					</i>
 					{item.label}
 				</Button>

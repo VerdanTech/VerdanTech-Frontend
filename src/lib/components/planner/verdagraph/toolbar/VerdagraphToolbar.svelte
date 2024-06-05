@@ -70,11 +70,13 @@
 	];
 </script>
 
-<Toolbar.Root class="flex items-center justify-center rounded-lg bg-neutral-3">
+<Toolbar.Root
+	class="flex h-auto items-center justify-center border-b border-neutral-6 bg-neutral-2"
+>
 	<ul class="flex h-full items-center justify-center">
 		<!-- Main toolbar -->
 		{#each tools as tool}
-			<li class="flex items-center">
+			<li class="flex h-full items-center">
 				<ToolbarButton spec={tool} size="text-md" />
 			</li>
 		{/each}

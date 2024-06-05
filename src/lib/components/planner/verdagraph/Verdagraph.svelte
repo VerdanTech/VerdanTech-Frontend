@@ -42,7 +42,7 @@
 						>
 							<VerdagraphCalendar />
 						</Resizable.Pane>
-						<Resizable.Handle />
+						<Resizable.Handle class="w-[1px] bg-neutral-6" />
 					{/if}
 					{#if content_pane_view_options?.includes('Toggle Layout')}
 						<Resizable.Pane
@@ -52,7 +52,7 @@
 						>
 							<VerdagraphLayout />
 						</Resizable.Pane>
-						<Resizable.Handle />
+						<Resizable.Handle class="w-[1px] bg-neutral-6" />
 					{/if}
 					{#if content_pane_view_options?.includes('Toggle List')}
 						<Resizable.Pane
@@ -63,7 +63,6 @@
 						>
 							<Tree />
 						</Resizable.Pane>
-						<Resizable.Handle />
 					{/if}
 				</Resizable.PaneGroup>
 			</Resizable.Pane>
